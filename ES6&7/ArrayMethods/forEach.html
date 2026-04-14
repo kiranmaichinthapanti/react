@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const watches = [
+                {
+                    id: 1,
+                    brand: "Rolex",
+                    model: "Submariner",
+                    price: 850000,
+                    type: "Analog"
+                },
+                {
+                    id: 2,
+                    brand: "Casio",
+                    model: "G-Shock",
+                    price: 12000,
+                    type: "Digital"
+                },
+                {
+                    id: 3,
+                    brand: "Apple",
+                    model: "Watch Series 9",
+                    price: 45000,
+                    type: "Smartwatch"
+                },
+                {
+                    id: 4,
+                    brand: "Fossil",
+                    model: "Gen 6",
+                    price: 28000,
+                    type: "Smartwatch"
+                },
+                {
+                    id: 5,
+                    brand: "Titan",
+                    model: "Neo",
+                    price: 6500,
+                    type: "Analog"
+                }
+            ];
+
+            watches.forEach(function(watch, index) {
+                console.log(watch.brand, index);
+            });
+
+            const randomNumberArr = [12,33,98,9,89];
+
+            randomNumberArr.forEach(function(number){
+                if (number % 2 === 0){
+                    console.log("even", number);
+                } else {
+                    console.log('odd', number);
+                }
+            });
+
+            const numbers = [5, 12, 8, 130, 44];
+
+            let maxValue = numbers[0];
+
+            numbers.forEach(function(num){
+                if (num > maxValue) {
+                    maxValue = num;
+                }
+            });
+
+            console.log("max value:", maxValue);
+
+            const cities = ['Delhi', 'Mumbai', 'Delhi', 'Chennai', 'Mumbai', 'Delhi'];
+
+            const citiesCounter = {};
+
+            cities.forEach(function(citi){
+                if (Object.keys(citiesCounter).includes(citi)){
+                    citiesCounter[citi] += 1;
+                } else {
+                    citiesCounter[citi] = 1;
+                }
+            });
+
+            console.log(citiesCounter);
+        </script>     
+    </body>
+</html>

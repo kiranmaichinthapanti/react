@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const names = ["Kiran", "Sita", "Ravi", "Anjali","Rahul"];
+
+            const formattedNames = names.map(function(name){
+                return name.toUpperCase();
+            });
+            console.log(formattedNames);
+
+            const users = [
+                { name: "Alice", email: "alice@example.com", age: 25, isActive: true },
+                { name: "Bob", email: "bob@example.com", age: 30, isActive: false },
+                { name: "Charlie", email: "charlie@example.com", age: 28, isActive: true },
+                { name: "Diana", email: "diana@example.com", age: 22, isActive: true },
+                { name: "Ethan", email: "ethan@example.com", age: 35, isActive: false },
+            ];
+
+            //['Alice', 'Bob', 'Charlie','Diana','Ethan']
+            const userNames = [];
+
+            users.forEach(function(user){
+                userNames.push(user.name);
+            });
+            console.log(userNames);
+
+            //to minimize above we will use map
+
+            const userNames2 = users.map(function(user){
+                return user.name;
+            });
+
+            console.log(userNames2);
+
+            const fruits = ['apple','banana','cherry'];
+
+            const fruitFirstName = fruits.map(function(fruit){
+                return fruit[0];
+            });
+
+            console.log(fruitFirstName);
+
+        </script>
+        
+    </body>
+</html>

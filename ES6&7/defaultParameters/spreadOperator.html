@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const marks = [48,89,90];
+
+            const marks2 = [34, 78, ...marks];
+
+            console.log(marks2);
+
+            const salesA = [100, 120, 140];
+            const salesB = [200, 220, 250];
+            const salesC = [150, 160, 180];
+
+            const allSales = [...salesA, ...salesB, ...salesC];
+
+            console.log(allSales);
+
+            const groupAUsers = [
+                { id: 1, name: 'Ravi', age: 25, isActive: true },
+                { id: 2, name: 'Sita', age: 28, isActive: false }
+            ];
+
+            const groupBUsers = [
+                { id: 3, name: 'Kiran', age: 26, isActive: true },
+                { id: 4, name: 'Anjali', age: 32, isActive: false }
+            ];
+
+            const allUsers = [...groupAUsers, ...groupBUsers];
+            
+            console.log(allUsers);
+
+            const obj = {id:1, name:"kiran"};
+
+            const obj2 = {designation:"private employee", salary:40000};
+
+           const userInfo = {...obj, ...obj2}
+
+           console.log(userInfo);
+
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const maxNumbers = [5, 12, 8, 130, 44];
+
+            maxValue = maxNumbers.reduce((accumulator, num) => num > accumulator ? num : accumulator, maxNumbers[0]); 
+
+            console.log(maxValue);
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            const products = [
+                {
+                    id: 1,
+                    name: "Laptop",
+                    category: "Electronics",
+                    price: 55000,
+                    stock: 10,
+                    isAvailable: true
+                },
+                {
+                    id: 2,
+                    name: "Smartphone",
+                    category: "Electronics",
+                    price: 25000,
+                    stock: 0,
+                    isAvailable: false
+                },
+                {
+                    id: 3,
+                    name: "Headphones",
+                    category: "Accessories",
+                    price: 3000,
+                    stock: 25,
+                    isAvailable: true
+                },
+                {
+                    id: 4,
+                    name: "Office Chair",
+                    category: "Furniture",
+                    price: 7000,
+                    stock: 5,
+                    isAvailable: true
+                },
+                {
+                    id: 5,
+                    name: "Notebook",
+                    category: "Stationery",
+                    price: 120,
+                    stock: 100,
+                    isAvailable: true
+                }
+            ];
+            
+            // let totalAmount = 0;
+        
+            // products.forEach(function(product){
+            //     totalAmount += product.price;
+            // });
+
+            // console.log(totalAmount);
+
+            const totalAmount = products.reduce(function(accumulator, product){
+                return accumulator + product.price;
+            }, 0);
+
+            console.log(totalAmount);
+
+            const numbers = [2, 3, 4];
+
+            const productNumbers = numbers.reduce(function(accumulator, number) {
+                return accumulator * number;
+            }, 1);
+
+            console.log(productNumbers);
+
+            const maxNumbers = [5, 12, 8, 130, 44];
+
+            const maxNum = maxNumbers.reduce(function(accumulator, num) {
+                // return accumulator > num ? accumulator : num;
+                return num > accumulator ? num : accumulator;
+            }, maxNumbers[0]);
+
+            console.log(maxNum);
+
+            const fruits = ['apple','banana', 'apple', 'banana','apple','orange'];
+
+            const fruitCounter = {};
+
+            fruits.forEach(function(fruit){
+                if (Object.keys(fruitCounter).includes(fruit)){
+                    fruitCounter[fruit] += 1;
+                } else {
+                    fruitCounter[fruit] = 1;
+                }
+            });
+
+            console.log(fruitCounter);
+            
+            const cities = ['Delhi', 'Mumbai', 'Delhi', 'Chennai', 'Mumbai', 'Delhi'];
+
+            const citiesCounter = cities.reduce(function(accumulator,city){
+                // accumulator[city] = (accumulator[city] || 0) + 1;
+                if (accumulator[city]){
+                    accumulator[city] +=1;
+                } else {
+                    accumulator[city] = 1;
+                }
+                return accumulator;
+            }, {});
+
+            console.log(citiesCounter);
+        </script>
+        
+    </body>
+</html>
